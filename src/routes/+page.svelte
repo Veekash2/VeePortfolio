@@ -1,9 +1,7 @@
 <script lang="ts">
   import ThreeBackground from '$lib/ThreeBackground.svelte';
-  // Import data
   import { universityModules, certifications } from '$lib/skillsData';
   
-  // Define a type for the tab state
   type Tab = 'university' | 'licenses';
   let activeTab: Tab = 'university'; 
 </script>
@@ -13,7 +11,11 @@
 <main class="container">
   <header class="hero">
     <h1>Veekash Singh</h1>
-    <p>Software Engineer | BSc Graduate | SRE Enthusiast</p>
+    <p class="subtitle">Software Engineer | BSc Graduate | SRE Enthusiast</p>
+    
+    <a href="https://www.linkedin.com/in/veekash-singh-09a247199" target="_blank" class="linkedin-btn">
+      <span class="icon">in</span> Connect on LinkedIn
+    </a>
   </header>
 
   <div class="tabs">
@@ -58,11 +60,43 @@
 </main>
 
 <style>
-  /* Same CSS as before */
   .container { max-width: 1000px; margin: 0 auto; padding: 4rem 1rem; }
+  
   .hero { text-align: center; margin-bottom: 4rem; }
   .hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
-  .hero p { font-size: 1.2rem; color: var(--text-muted); }
+  .subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+  /* LinkedIn Button Styling */
+  .linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0077b5; /* LinkedIn Blue */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+    font-size: 0.95rem;
+  }
+  .linkedin-btn:hover {
+    background: #005e93;
+    transform: translateY(-2px);
+  }
+  .icon {
+    font-weight: bold;
+    font-family: serif; /* Mimics the 'in' logo style slightly */
+    background: white;
+    color: #0077b5;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+  }
 
   .tabs { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); }
   .tabs button { background: none; border: none; color: var(--text-muted); font-size: 1.1rem; padding: 1rem 2rem; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
