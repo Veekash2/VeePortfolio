@@ -1,0 +1,23 @@
+/* src/app.css */
+:root {
+  --bg-dark: #0f172a;       /* Deep Corporate Blue */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Translucent Blue-Grey */
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --accent-gold: #c0a062;   /* The 'University' Gold */
+  --accent-green: #10b981;  /* The 'License' Green */
+  --border-color: #334155;
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+* { box-sizing: border-box; }
